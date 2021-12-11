@@ -1,0 +1,10 @@
+Lab 1:-Running first angular application
+Lab 2:-Creating the Customer UI,Model and Component.
+Lab 3:-Angular Routing:Creating Master Pages and navigations.
+Lab 4:- Increasing Performance using Lazy Loading.
+Lab 5:- Implement Validations in Angular.
+Lab 6:- Angular Dependency Injection.
+Lab 7:- Input,output and event emitters.
+Lab 8:- Make HTTP calls using Angular Components.
+Lab 9:- Migratting Angular 6 to Angular 7
+Lab 10 :- Unit Testing in Angular using Jasmine & Karma.

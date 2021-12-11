@@ -1,0 +1,45 @@
+<html>
+<body>
+Number1
+<input type="text" value="1" id="txtNumber1" />
+Number2
+<input type="text" value="2" id="txtNumber2" />
+<input type="button" value="SUM"  onclick="Sum()"/>
+</body>
+
+
+</html>
+<script>
+    //variable
+    //operator and operand
+    //precedence--ordering-ranking  +,-,*,/,%
+    //older version
+    // var Sum=function(){
+        //will have their own THIs
+    // }
+
+    //will not  have their own this
+    //new version of the function
+    const Sum= ()=>{
+        var Number1=Number(document.getElementById('txtNumber1').value);
+        var Number2=Number(document.getElementById('txtNumber2').value);
+        console.log(Number1+Number2);
+    }
+
+/*
+if(Number1>Number2){
+  console.log(Number1+" is greater than "+Number2);  
+}
+else{
+    console.log(Number2+" is greater than "+Number1); 
+}
+*/
+//odd and even
+
+//var i=1+'1';
+//var i=1-'1';
+
+
+
+
+</script>
