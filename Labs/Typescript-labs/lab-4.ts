@@ -1,6 +1,6 @@
 //Classes and Objects
 
-class class_name{
+export class class_name{
     //1.Fields
     //2.Constructor  constructor()
     //3.Funcions function 
