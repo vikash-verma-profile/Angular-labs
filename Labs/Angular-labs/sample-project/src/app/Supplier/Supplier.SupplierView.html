@@ -1,0 +1,33 @@
+<!--Two way binding we are doing with [()]-->
+<!--ngModel is an example Attribute type of directive -->
+
+Supplier Code<input [(ngModel)]="SupplierModel.SupplierCode" type="text" /><br />
+Supplier Name<input [(ngModel)]="SupplierModel.SupplierName" type="text" /><br />
+Supplier Amount<input [(ngModel)]="SupplierModel.SupplierAmount" type="text" /><br />
+
+<!-- one side binding  event binding here -->
+<input type="button"  (click)="Add()" value="Add" />
+<!-- 
+{{CustomerModel.CustomerCode}}
+{{CustomerModel.CustomerName}}
+{{CustomerModel.CustomerAmount}} -->
+
+<table border="1">
+    <tr>
+        <td>Supplier Code</td>
+        <td>Supplier Name</td>
+        <td>Supplier Amount</td>
+        <td>Actions</td>
+    </tr>
+    <!-- *ngFor is an example Structural type of directive -->
+    <tr *ngFor="let cust of SupplierModels">
+        <td>{{cust.SupplierCode}}</td>
+        <td>{{cust.SupplierName}}</td>
+        <td>{{cust.SupplierAmount}}</td>
+        <td>
+            <input type="button" value="Edit" (click)="EditCustomer(cust)" />
+            <input type="button" value="Delete" (click)="DeleteCustomer(cust)"/>
+        </td>
+    </tr>
+
+</table>
