@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-
-
 import { CustomerComponent } from './Customer/Customer.CustomerComponent';
+
+
+
 import { HomeComponent } from './Home/Home.HomeComponent';
 import { HomeNewComponent } from './Home/Home.HomeNewComponent';
 import { MasterComponent } from './Home/Home.MasterComponent';

@@ -10,3 +10,4 @@ export const MainRoutes=[
   {path:'',component:HomeNewComponent,outlet:'homepage2'}
 ];
 
+//http://localhost:4200/(homepage1:Customer)
