@@ -24,7 +24,7 @@ export class AppComponent {
     this.CustomerModel=input;
   }
   DeleteCustomer(input:Customer){
-    this.CustomerModels=this.CustomerModels.filter(x=>x==input);
+    this.CustomerModels=this.CustomerModels.filter(x=>x!=input);
   }
 
 }
