@@ -1,8 +1,28 @@
-Customer Code<input [(ngModel)]="CustomerModel.CustomerCode" type="text" /><br/>
-Customer Name<input [(ngModel)]="CustomerModel.CustomerName" type="text" /><br/>
-Customer Amount<input [(ngModel)]="CustomerModel.CustomerAmount" type="text" /><br/>
+<!--Two way binding we are doing with [()]-->
+<!--ngModel is an example Attribute type of directive -->
 
+Customer Code<input [(ngModel)]="CustomerModel.CustomerCode" type="text" /><br />
+Customer Name<input [(ngModel)]="CustomerModel.CustomerName" type="text" /><br />
+Customer Amount<input [(ngModel)]="CustomerModel.CustomerAmount" type="text" /><br />
+
+<!-- one side binding  event binding here -->
+<input type="button"  (click)="Add()" value="Add" />
+<!-- 
 {{CustomerModel.CustomerCode}}
 {{CustomerModel.CustomerName}}
-{{CustomerModel.CustomerAmount}}
+{{CustomerModel.CustomerAmount}} -->
 
+<table border="1">
+    <tr>
+        <td>Customer Code</td>
+        <td>Customer Name</td>
+        <td>Customer Amount</td>
+    </tr>
+    <!-- *ngFor is an example Structural type of directive -->
+    <tr *ngFor="let cust of CustomerModels">
+        <td>{{cust.CustomerCode}}</td>
+        <td>{{cust.CustomerName}}</td>
+        <td>{{cust.CustomerAmount}}</td>
+    </tr>
+
+</table>
