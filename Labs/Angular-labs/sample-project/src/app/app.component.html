@@ -17,12 +17,17 @@ Customer Amount<input [(ngModel)]="CustomerModel.CustomerAmount" type="text" /><
         <td>Customer Code</td>
         <td>Customer Name</td>
         <td>Customer Amount</td>
+        <td>Actions</td>
     </tr>
     <!-- *ngFor is an example Structural type of directive -->
     <tr *ngFor="let cust of CustomerModels">
         <td>{{cust.CustomerCode}}</td>
         <td>{{cust.CustomerName}}</td>
         <td>{{cust.CustomerAmount}}</td>
+        <td>
+            <input type="button" value="Edit" (click)="EditCustomer(cust)" />
+            <input type="button" value="Delete" (click)="DeleteCustomer(cust)"/>
+        </td>
     </tr>
 
 </table>

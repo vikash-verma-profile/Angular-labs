@@ -14,8 +14,17 @@ export class AppComponent {
   //added add method to add customer
   Add(){
     //console.log(this.CustomerModel);
+
     this.CustomerModels.push(this.CustomerModel);
+
     console.log(this.CustomerModels);
+    this.CustomerModel=new Customer();
+  }
+  EditCustomer(input:Customer){
+    this.CustomerModel=input;
+  }
+  DeleteCustomer(input:Customer){
+    this.CustomerModels=this.CustomerModels.filter(x=>x==input);
   }
 
 }
