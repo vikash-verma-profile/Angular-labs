@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { CustomerComponent } from './Customer/Customer.CustomerComponent';
 import { HomeComponent } from './Home/Home.HomeComponent';
+import { HomeNewComponent } from './Home/Home.HomeNewComponent';
 import { MasterComponent } from './Home/Home.MasterComponent';
 import { MainRoutes } from './Routing/MainRouting';
 import { SupplierComponent } from './Supplier/Supplier.SupplierComponent';
@@ -15,7 +16,8 @@ import { SupplierComponent } from './Supplier/Supplier.SupplierComponent';
     CustomerComponent,
     MasterComponent,
     HomeComponent,
-    SupplierComponent
+    SupplierComponent,
+    HomeNewComponent
   ],
   imports: [
     RouterModule.forRoot(MainRoutes),

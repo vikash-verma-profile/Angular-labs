@@ -5,14 +5,16 @@
     <!--Body Part-->
     <tr bordercolor="red">
         <td>
-            <a href="Home">Home</a><br/>
-            <a href="Customer">Customer</a><br/>
-            <a href="Supplier">Supplier</a><br/>
+            <a [routerLink]="['Home']">Home</a><br/>
+            <a [routerLink]="['Customer']">Customer</a><br/>
+            <a [routerLink]="['Supplier']">Supplier</a><br/>
         </td> 
         
         <td>
             <div>
-                <router-outlet></router-outlet>
+                <router-outlet ></router-outlet>
+                <router-outlet name="homepage1"></router-outlet>
+                <router-outlet name="homepage2"></router-outlet>
             </div>
         </td>
     </tr>
