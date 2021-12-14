@@ -1,0 +1,9 @@
+1.generics
+2.do's and do'nt in typescript
+3.ng serve and other commands are working
+4.we will start with angular binding and templating with one customer and supplier example
+5:-Running first angular application
+6:-Creating the Customer UI,Model and Component.
+7:-Angular Routing:Creating Master Pages and navigations.
+8:- Increasing Performance using Lazy Loading.
+9.LifecycleHooks
