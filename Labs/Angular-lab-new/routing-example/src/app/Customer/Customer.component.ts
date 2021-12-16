@@ -13,6 +13,7 @@ export class CustomerComponent {
   }
 
   hasError(typeofvalidator:string,controlname:string):boolean{
-      return this.CustomerModel.formCustomerGroup.controls[controlname].hasError(typeofvalidator);
+      return this.CustomerModel.formCustomerGroup.controls[controlname].
+      hasError(typeofvalidator);
   }
 }

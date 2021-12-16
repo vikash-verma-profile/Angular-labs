@@ -9,6 +9,7 @@ export class Customer{
     CustomerCode:string="";
     CustomerName:string="";
     CustomerAmount:number=0;
+    CustomerEmail:string="";
 
     formCustomerGroup:FormGroup; //Create object of FormGroup
 
@@ -17,5 +18,11 @@ export class Customer{
         this.formCustomerGroup=_builder.group({});//use this builder to create
         //controls-->validations
         this.formCustomerGroup.addControl("CustomerNameControl",new FormControl('',Validators.required));
+       
+        //4 letter Numberic
+        var Validationcollection=[];
+        Validationcollection.push(Validators.required);
+        Validationcollection.push(Validators.pattern('^[0-9]{4,4}$'));
+        this.formCustomerGroup.addControl("CustomerEmailControl",new FormControl('',Validators.compose(Validationcollection)));
     }
 }

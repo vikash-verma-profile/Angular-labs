@@ -2,12 +2,12 @@
   <h1>Customer Page</h1>
   <form [formGroup]="CustomerModel.formCustomerGroup">
     <div class="form-group">
-      <label for="CustomerCode">CustomerCode</label>
+      <label for="CustomerCode">Customer Code</label>
       <input [(ngModel)]="CustomerModel.CustomerCode" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="CustomerCode"
         placeholder="Please enter customer code">
     </div>
     <div class="form-group">
-      <label for="CustomerName">CustomerName</label>
+      <label for="CustomerName">Customer Name</label>
       <input [(ngModel)]="CustomerModel.CustomerName" formControlName="CustomerNameControl"  type="text" class="form-control" id="CustomerName"
         placeholder="Please enter customer name">
         <small  *ngIf="CustomerModel.formCustomerGroup.dirty" class="form-text text-muted"  [hidden]="!(hasError('required','CustomerNameControl'))">
@@ -15,9 +15,21 @@
         </small>
     </div>
     <div class="form-group">
-      <label for="CustomerAmount">CustomerAmount</label>
+      <label for="CustomerAmount">Customer Amount</label>
       <input [(ngModel)]="CustomerModel.CustomerAmount" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="CustomerAmount"
         placeholder="Please enter customer amount">
+    </div>
+
+    <div class="form-group">
+      <label for="CustomerEmail">Customer Email</label>
+      <input [(ngModel)]="CustomerModel.CustomerEmail" formControlName="CustomerEmailControl" type="text" class="form-control" id="CustomerEmail"
+        placeholder="Please enter email">
+        <small  *ngIf="CustomerModel.formCustomerGroup.dirty" class="form-text text-muted"  [hidden]="!(hasError('required','CustomerEmailControl'))">
+          Customer Email is required
+        </small>
+        <small  *ngIf="CustomerModel.formCustomerGroup.dirty" class="form-text text-muted"  [hidden]="!(hasError('pattern','CustomerEmailControl'))">
+          Customer Email format is not proper
+        </small>
     </div>
 
     <input [disabled]="!(CustomerModel.formCustomerGroup.valid)" type="button" class="btn btn-primary mb-2" (click)="AddCustomer()" value="Add" />
