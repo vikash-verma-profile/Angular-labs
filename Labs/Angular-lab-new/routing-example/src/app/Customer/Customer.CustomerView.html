@@ -10,6 +10,9 @@
       <label for="CustomerName">CustomerName</label>
       <input [(ngModel)]="CustomerModel.CustomerName" formControlName="CustomerNameControl"  type="text" class="form-control" id="CustomerName"
         placeholder="Please enter customer name">
+        <small  *ngIf="CustomerModel.formCustomerGroup.dirty" class="form-text text-muted"  [hidden]="!(hasError('required','CustomerNameControl'))">
+          Customer Name is required
+        </small>
     </div>
     <div class="form-group">
       <label for="CustomerAmount">CustomerAmount</label>
@@ -18,6 +21,8 @@
     </div>
 
     <input [disabled]="!(CustomerModel.formCustomerGroup.valid)" type="button" class="btn btn-primary mb-2" (click)="AddCustomer()" value="Add" />
+    
+  
   </form>
 </div>
 
