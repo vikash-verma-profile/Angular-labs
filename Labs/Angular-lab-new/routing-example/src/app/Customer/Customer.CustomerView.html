@@ -1,1 +1,24 @@
-Customer Page
+<div class="jumbotron">
+  <h1>Customer Page</h1>
+  <form [formGroup]="CustomerModel.formCustomerGroup">
+    <div class="form-group">
+      <label for="CustomerCode">CustomerCode</label>
+      <input [(ngModel)]="CustomerModel.CustomerCode" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="CustomerCode"
+        placeholder="Please enter customer code">
+    </div>
+    <div class="form-group">
+      <label for="CustomerName">CustomerName</label>
+      <input [(ngModel)]="CustomerModel.CustomerName" formControlName="CustomerNameControl"  type="text" class="form-control" id="CustomerName"
+        placeholder="Please enter customer name">
+    </div>
+    <div class="form-group">
+      <label for="CustomerAmount">CustomerAmount</label>
+      <input [(ngModel)]="CustomerModel.CustomerAmount" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="CustomerAmount"
+        placeholder="Please enter customer amount">
+    </div>
+
+    <input [disabled]="!(CustomerModel.formCustomerGroup.valid)" type="button" class="btn btn-primary mb-2" (click)="AddCustomer()" value="Add" />
+  </form>
+</div>
+
+{{CustomerModel.CustomerAmount}}
