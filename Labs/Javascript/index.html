@@ -1,0 +1,49 @@
+<html>
+<body>
+    Number1
+    <input type="text" id="txtNumber1" placeholder="Please enter some value"/><br /><br />
+    <!-- Number2
+    <input type="text" id="txtNumber2" placeholder="Please enter some value"/><br /><br /> -->
+    <input type="button" value="Validate" onclick="Validate()" /><br /><br />
+    <label id="lblNumberMessage">
+
+    </label><br /><br />
+</body>
+
+</html>
+
+<script>
+
+    // function Sum() {
+    //     var Number1=Number(document.getElementById('txtNumber1').value);
+    //     var Number2=Number(document.getElementById('txtNumber2').value);
+    //     document.getElementById('lblNumberMessage').innerHTML = Number1+Number2;
+    // }
+
+    //whether a number is postive or negative
+
+    //check whether a person can vote or not 18
+    //if the age 18 the person able to vote
+    //if age is >60 the person is a senior citizen
+
+    // 1 0 -1
+    //if else 
+    //if else if
+    function Validate(){
+        var Number1=Number(document.getElementById('txtNumber1').value);
+        if(Number1>0){
+            document.getElementById('lblNumberMessage').innerHTML = Number1+"is postive";
+        }
+        else if(Number1<0){
+            document.getElementById('lblNumberMessage').innerHTML = Number1+"is a negative number";
+        }
+        else{
+            document.getElementById('lblNumberMessage').innerHTML = Number1+"is a whole number";
+        }
+    }
+//console.log("Hello");
+
+
+
+//alert("Hello");
+</script>

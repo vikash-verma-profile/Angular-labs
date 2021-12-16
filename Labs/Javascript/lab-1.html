@@ -1,0 +1,32 @@
+<html>
+<body>
+<div class="sample">
+    Div one
+</div>
+<div class="sample">
+    Div two
+</div>
+
+<input type="text" name="fname"  value="Vikash" />
+<input type="text" name="fname"  value="Mohit" />
+
+<ul>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+</ul>
+</body>
+</html>
+<script>
+var tagnames=document.getElementsByTagName('LI');
+console.log(tagnames[0].innerHTML);
+
+var nameelements=document.getElementsByName('fname')[0].value;
+console.log(nameelements);
+
+var elements=document.getElementsByClassName('sample');
+for(var i=0;i<elements.length;i++){
+    console.log(elements[i].innerHTML);
+}
+
+</script>

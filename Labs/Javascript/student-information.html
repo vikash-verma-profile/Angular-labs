@@ -1,0 +1,77 @@
+<html>
+
+<body>
+    <label>First Name</label>
+    <br /><br />
+    <input type="text" id="txtFirstName"/>
+    <label id="errMsgFirstName" style="color: red;"></label>
+    <br /><br />
+    <label>Last Name</label><br /><br />
+    <input type="text" />
+    <label id="errMsgLastName"></label>
+    <br /><br />
+    <label>Gender</label> <br /><br />
+    Male
+    <input type="radio" value="Male" name="Gender" />
+    Female
+    <input type="radio" value="Female" name="Gender" />
+    <label id="errMsgGender" style="color: red;"></label>
+    <br /><br />
+   
+    <label>Course</label><br /><br />
+    CSE
+    <input type="checkbox" />
+    IT
+    <input type="checkbox" />
+    ME
+    <input type="checkbox" />
+    <br /><br />
+
+    Address
+    <br /><br />
+    <textarea></textarea>
+    <br /><br />
+    Country
+    <br /><br />
+    <select>
+        <option>Please select a country</option>
+        <option>India</option>
+        <option>USA</option>
+    </select>
+    <br /><br />
+    City
+    <br /><br />
+    <select>
+        <option>Please select a City</option>
+        <option>Delhi</option>
+        <option>Mumbai</option>
+    </select>
+    <br /><br />
+    <input type="submit" onclick="Validate()"/>
+</body>
+
+</html>
+
+<script>
+    function Validate()
+    {
+        //validate for first name and last name
+        if(document.getElementById('txtFirstName').value==''){
+            document.getElementById('errMsgFirstName').innerHTML="Please enter your first Name";
+        }
+        else{
+            document.getElementById('errMsgFirstName').innerHTML="";
+        }
+        if(document.querySelector('input[name="Gender"]:checked')==null){
+            document.getElementById('errMsgGender').innerHTML="Please select your gender";
+        }else{
+            document.getElementById('errMsgGender').innerHTML="";
+        }
+    //     if(document.querySelector('input[name="Gender"]:checked')){
+
+    //     }
+    //    console.log(document.querySelector('input[name="Gender"]:checked').value);
+
+    }
+
+</script>

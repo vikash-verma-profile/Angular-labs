@@ -1,0 +1,26 @@
+
+<!--Demo for Property Bindings  []-->
+
+<!-- Event Bindings  ()-->
+First Name 
+<input type="text" [value]="displayvariable"/>
+Last Name 
+<input type="text"  />
+<input type="button" (click)="GetPosts()" value="Get posts"/>
+<img [src]="imageurl" />
+
+<div>
+  Address 
+<input type="text" [(ngModel)]="addressModel.AddressValue" />
+</div>
+<div>
+  {{addressModel.AddressValue}}
+  </div>
+
+{{displayvariable}}
+<br/><br/><br/>
+Data from API is below <br/><br/><br/>
+userId:{{TodoModel.userId}}<br/>
+id:{{TodoModel.id}}<br/>
+title:{{TodoModel.title}}<br/>
+completed:{{TodoModel.completed}}<br/>

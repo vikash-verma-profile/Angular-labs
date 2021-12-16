@@ -1,0 +1,40 @@
+<!--Binding's we have in javascript vs angular bindings-->
+
+<html>
+    <body>
+        <input id="txtNumber" type="text" />
+        <span id="val"></span>
+        <button  id="btnincrement">Increment</button>
+    </body>
+</html>
+<script>
+
+    const data={
+        value:""
+    };
+
+    const NumberElement=document.getElementById('txtNumber');
+
+    Object.defineProperty(data,'prop',{
+        get:function(){
+            console.log('Getter function called');
+            return this.value;
+        },
+        set:function(value){
+            console.log('Setter Function is called');
+            this.value=value;
+            NumberElement.value=value;
+            printVal();
+        }
+    });
+    function printVal(){
+        const ShowElement=document.getElementById('val');
+        ShowElement.innerText=data.prop;
+    }
+    const btn=document.getElementById('btnincrement');
+    btn.addEventListener('click',()=>{
+        data.prop=Number(data.prop)+1;
+    });
+
+
+</script>
