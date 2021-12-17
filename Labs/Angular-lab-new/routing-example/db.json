@@ -13,6 +13,20 @@
       "CustomerName": "asdasd",
       "CustomerAmount": "1000",
       "id": 2
+    },
+    {
+      "CustomerCode": "1010",
+      "CustomerEmail": "123@yahoo.com",
+      "CustomerName": "sumit kumar",
+      "CustomerAmount": "1000",
+      "id": 3
+    },
+    {
+      "CustomerCode": "10091",
+      "CustomerEmail": "amit@kl.com",
+      "CustomerName": "sumit kumar sharma",
+      "CustomerAmount": "10001",
+      "id": 4
     }
   ]
 }

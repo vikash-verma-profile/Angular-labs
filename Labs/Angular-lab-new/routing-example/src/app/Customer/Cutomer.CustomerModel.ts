@@ -10,7 +10,7 @@ export class Customer{
     CustomerName:string="";
     CustomerAmount:number=0;
     CustomerEmail:string="";
-
+    id:number=0;
     formCustomerGroup:FormGroup; //Create object of FormGroup
 
     constructor(){

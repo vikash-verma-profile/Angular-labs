@@ -36,6 +36,26 @@
     
   
   </form>
-</div>
 
-{{CustomerModel.CustomerAmount}}
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Customer Code</th>
+        <th scope="col">Customer Name</th>
+        <th scope="col">Customer Amount</th>
+        <th scope="col">Customer Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let cust of CustomerModels">
+        <th scope="row">{{cust.id}}</th>
+        <th>{{cust.CustomerCode}}</th>
+        <td>{{cust.CustomerName}}</td>
+        <td>{{cust.CustomerAmount}}</td>
+        <td>{{cust.CustomerEmail}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

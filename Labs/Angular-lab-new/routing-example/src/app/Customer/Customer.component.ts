@@ -9,12 +9,25 @@ import { Customer } from './Cutomer.CustomerModel';
 export class CustomerComponent {
   LogObj:BaseLogger;
   CustomerModel:Customer=new Customer();
+  CustomerModels:Array<Customer>=new Array<Customer>();
 
   constructor(_injector:Injector,public httpc:HttpClient){
     this.LogObj=_injector.get("2");
     this.LogObj.Log();
   }
 
+  ngOnInit(){
+    this.GetCustomerData();
+    }
+  GetCustomerData(){
+    this.httpc.get("http://localhost:3000/Customers").subscribe(res=>this.SuceessGet(res),res=>this.ErrorGet(res));
+  }
+  SuceessGet(res:any){
+   this.CustomerModels=res;
+  }
+  ErrorGet(res:any){
+    console.log(res);
+  }
   AddCustomer(){
 
     var custdto:any={};
@@ -29,7 +42,7 @@ export class CustomerComponent {
 
   Success(res:any)
   {
-    console.log(res);
+    this.GetCustomerData();
   }
   
   Error(res:any)
