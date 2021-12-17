@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { CustomerRoutes } from '../Routing/CustomerRoutes';
+import { GridComponent } from '../Utility/Utility.GridComponent';
+import { GridUIModule } from '../Utility/Utility.GridModule';
 import { CustomerComponent } from './Customer.component';
 
 
@@ -16,7 +18,8 @@ import { CustomerComponent } from './Customer.component';
     RouterModule.forChild(CustomerRoutes),
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    GridUIModule
   ],
   providers: [],
   bootstrap: [CustomerComponent]

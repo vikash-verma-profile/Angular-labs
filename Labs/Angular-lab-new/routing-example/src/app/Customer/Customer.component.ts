@@ -53,4 +53,19 @@ export class CustomerComponent {
       return this.CustomerModel.formCustomerGroup.controls[controlname].
       hasError(typeofvalidator);
   }
+
+  GetCustomerDataByID(id:number){
+    this.httpc.get("http://localhost:3000/Customers/"+id).subscribe(res=>this.SuceessGetByID(res),res=>this.ErrorGet(res));
+  }
+  SuceessGetByID(res:any){
+    console.log(res);
+    this.CustomerModel.CustomerAmount=res.CustomerAmount;
+    this.CustomerModel.CustomerCode=res.CustomerCode;
+    this.CustomerModel.CustomerEmail=res.CustomerEmail;
+    this.CustomerModel.CustomerName=res.CustomerName;
+  }
+  EditCustomer(_selected:any){
+    console.log(_selected);
+    //this.GetCustomerDataByID(id);
+  }
 }

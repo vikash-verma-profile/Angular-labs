@@ -7,6 +7,7 @@ import { MasterComponent } from './Home.MasterComponent';
 import {MainRoutes} from '../Routing/MainRoutes';
 import { BaseLogger, ConsoleLogger, DbLogger } from '../Utility/Utility.Logger';
 import {HttpClientModule} from '@angular/common/http';
+import { GridUIModule } from '../Utility/Utility.GridModule';
 var providerarray:any=[];
 
 providerarray.push({provide:"1",useClass:DbLogger})

@@ -1,0 +1,20 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th *ngFor="let col of gridcolumns">
+                {{col.colName}}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let colObj of griddata">
+            <td *ngFor="let col of gridcolumns">
+                {{colObj[col.colName]}}
+            </td>
+            <td><a type="button"  (click)="SelectGrid(colObj)" class="btn btn-primary mb-2" >Edit</a>
+                <!-- &nbsp;
+                <input type="button" value="Delete" class="btn btn-primary mb-2" /> -->
+            </td>
+        </tr>
+    </tbody>
+</table>

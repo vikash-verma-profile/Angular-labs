@@ -28,5 +28,14 @@
       "CustomerAmount": "10001",
       "id": 4
     }
+  ],
+  "Suppliers": [
+    {
+      "SupplierCode": "1001",
+      "SupplierEmail": "asdas@asd.com",
+      "SupplierName": "asdasd",
+      "SupplierAmount": "10000",
+      "id": 1
+    }
   ]
 }

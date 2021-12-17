@@ -37,7 +37,7 @@
   
   </form>
 
-
+<!-- 
   <table class="table table-hover">
     <thead>
       <tr>
@@ -56,11 +56,16 @@
         <td>{{cust.CustomerName}}</td>
         <td>{{cust.CustomerAmount}}</td>
         <td>{{cust.CustomerEmail}}</td>
-        <td><input type="button" value="Edit" class="btn btn-primary mb-2"/>
+        <td><input type="button" value="Edit" (click)="EditCustomer(cust.id)" class="btn btn-primary mb-2"/>
           &nbsp;
           <input type="button" value="Delete" class="btn btn-primary mb-2"/>
         </td>
       </tr>
     </tbody>
-  </table>
+  </table> 
+
+-->
+
+  <grid-ui [grid-columns]="[{'colName':'id'},{'colName':'CustomerCode'},{'colName':'CustomerName'},{'colName':'CustomerAmount'},{'colName':'CustomerEmail'}]"
+  [grid-data]="CustomerModels" (grid-selected)="EditCustomer($event)"></grid-ui>
 </div>

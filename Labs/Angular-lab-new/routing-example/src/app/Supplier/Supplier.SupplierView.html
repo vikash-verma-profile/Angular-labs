@@ -1,5 +1,69 @@
 <div class="jumbotron">
-    <h1>Supplier Page</h1>
-    <p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page.</p>
+  <h1>Supplier Page</h1>
+  <form [formGroup]="SupplierModel.formSupplierGroup">
+    <div class="form-group">
+      <label for="SupplierCode">Supplier Code</label>
+      <input [(ngModel)]="SupplierModel.SupplierCode" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="SupplierCode"
+        placeholder="Please enter Supplier code">
+    </div>
+    <div class="form-group">
+      <label for="SupplierName">Supplier Name</label>
+      <input [(ngModel)]="SupplierModel.SupplierName" formControlName="SupplierNameControl"  type="text" class="form-control" id="SupplierName"
+        placeholder="Please enter Supplier name">
+        <small  *ngIf="SupplierModel.formSupplierGroup.dirty" class="form-text text-muted"  [hidden]="!(hasError('required','SupplierNameControl'))">
+          Supplier Name is required
+        </small>
+    </div>
+    <div class="form-group">
+      <label for="SupplierAmount">Supplier Amount</label>
+      <input [(ngModel)]="SupplierModel.SupplierAmount" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="SupplierAmount"
+        placeholder="Please enter Supplier amount">
+    </div>
+
+    <div class="form-group">
+      <label for="SupplierEmail">Supplier Email</label>
+      <input [(ngModel)]="SupplierModel.SupplierEmail" formControlName="SupplierEmailControl" type="text" class="form-control" id="SupplierEmail"
+        placeholder="Please enter email">
+        <small  *ngIf="SupplierModel.formSupplierGroup.dirty" class="form-text text-muted"  [hidden]="!(hasError('required','SupplierEmailControl'))">
+          Supplier Email is required
+        </small>
+        <small  *ngIf="SupplierModel.formSupplierGroup.dirty" class="form-text text-muted"  [hidden]="!(hasError('pattern','SupplierEmailControl'))">
+          Supplier Email format is not proper
+        </small>
+    </div>
+
+    <input [disabled]="!(SupplierModel.formSupplierGroup.valid)" type="button" class="btn btn-primary mb-2" (click)="AddSupplier()" value="Add" />
     
-  </div>
+  
+  </form>
+
+<!-- 
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Supplier Code</th>
+        <th scope="col">Supplier Name</th>
+        <th scope="col">Supplier Amount</th>
+        <th scope="col">Supplier Email</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let cust of SupplierModels">
+        <th scope="row">{{cust.id}}</th>
+        <th>{{cust.SupplierCode}}</th>
+        <td>{{cust.SupplierName}}</td>
+        <td>{{cust.SupplierAmount}}</td>
+        <td>{{cust.SupplierEmail}}</td>
+        <td><input type="button" value="Edit" (click)="EditSupplier(cust.id)" class="btn btn-primary mb-2"/>
+          &nbsp;
+          <input type="button" value="Delete" class="btn btn-primary mb-2"/>
+        </td>
+      </tr>
+    </tbody>
+  </table> -->
+
+  <grid-ui [grid-columns]="[{'colName':'id'},{'colName':'SupplierCode'},{'colName':'SupplierName'},{'colName':'SupplierAmount'},{'colName':'SupplierEmail'}]"
+  [grid-data]="SupplierModels" (grid-selected)="EditSupplier($event)"></grid-ui>
+</div>
