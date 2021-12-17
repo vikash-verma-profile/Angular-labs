@@ -1,0 +1,7 @@
+<div></div>
+<h1>Parent Block</h1>
+
+<app-first-block [parentFormGroup]="inheritForm"></app-first-block>
+<app-second-block [parentFormGroup]="inheritForm"></app-second-block>
+
+<button [disabled]="!inheritForm.valid">Submit</button>
