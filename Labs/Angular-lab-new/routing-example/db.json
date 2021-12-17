@@ -1,0 +1,18 @@
+{
+  "Customers": [
+    {
+      "CustomerCode": "1009",
+      "CustomerEmail": "er.vikashverma@yahoo.com",
+      "CustomerName": "asdasd",
+      "CustomerAmount": "1000",
+      "id": 1
+    },
+    {
+      "CustomerCode": "1010",
+      "CustomerEmail": "Dummy@dumm.com",
+      "CustomerName": "asdasd",
+      "CustomerAmount": "1000",
+      "id": 2
+    }
+  ]
+}

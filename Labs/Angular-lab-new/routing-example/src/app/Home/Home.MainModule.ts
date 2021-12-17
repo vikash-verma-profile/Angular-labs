@@ -6,7 +6,7 @@ import { HomeComponent } from './Home.HomeComponent';
 import { MasterComponent } from './Home.MasterComponent';
 import {MainRoutes} from '../Routing/MainRoutes';
 import { BaseLogger, ConsoleLogger, DbLogger } from '../Utility/Utility.Logger';
-
+import {HttpClientModule} from '@angular/common/http';
 var providerarray:any=[];
 
 providerarray.push({provide:"1",useClass:DbLogger})
@@ -21,7 +21,8 @@ providerarray.push({provide:BaseLogger,useClass:ConsoleLogger})
     BrowserModule,
     RouterModule.forRoot(MainRoutes),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [providerarray],
   bootstrap: [MasterComponent]

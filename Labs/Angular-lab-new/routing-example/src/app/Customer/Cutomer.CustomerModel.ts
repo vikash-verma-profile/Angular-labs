@@ -22,7 +22,7 @@ export class Customer{
         //4 letter Numberic
         var Validationcollection=[];
         Validationcollection.push(Validators.required);
-        Validationcollection.push(Validators.pattern('^[0-9]{4,4}$'));
+       // Validationcollection.push(Validators.pattern('^[0-9]{4,4}$'));
         this.formCustomerGroup.addControl("CustomerEmailControl",new FormControl('',Validators.compose(Validationcollection)));
     }
 }
