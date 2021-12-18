@@ -14,6 +14,7 @@ export class AuthService {
       _user.email=user.email;
       _user.password=user.password;
 
+      console.log(_user);
     return this.http.post<any>(this._registerUrl, _user);
   }
 

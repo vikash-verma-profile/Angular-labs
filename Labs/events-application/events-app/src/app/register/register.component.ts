@@ -13,7 +13,9 @@ export class RegisterComponent {
   constructor(private _auth: AuthService, private _router: Router) {}
 
   registerUser() {
-    this._auth.registerUser(this.registerUser).subscribe(
+
+   
+    this._auth.registerUser(this.registerUserData).subscribe(
       (res) => {
         //console.log(res.token);
         localStorage.setItem('token', res.token);

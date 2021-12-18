@@ -13,7 +13,7 @@ export class LoginComponent {
  loginUser(){
      this._auth.loginUser(this.LoginUser).subscribe(res=>{
         localStorage.setItem('token',res.token);
-        this._router.navigate(['/special']);
+        this._router.navigate(['/events']);
      },
      err=>console.log(err))
  }
