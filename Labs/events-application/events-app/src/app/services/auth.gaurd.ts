@@ -10,6 +10,7 @@ export class AuthGaurd implements CanActivate{
 
     canActivate(): boolean{
         if(this._authService.loggedIn()){
+            console.log(true);
             return true;
         }
         else{
