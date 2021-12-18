@@ -20,10 +20,18 @@ export class CustomerComponent {
     this.GetCustomerData();
     }
   GetCustomerData(){
-    this.httpc.get("http://localhost:3000/Customers").subscribe(res=>this.SuceessGet(res),res=>this.ErrorGet(res));
+    this.httpc.get("https://localhost:44318/api/Customer").subscribe(res=>this.SuceessGet(res),res=>this.ErrorGet(res));
   }
   SuceessGet(res:any){
-   this.CustomerModels=res;
+    console.log(res);
+    for(var i=0;i<res.length;i++){
+     var customer=new Customer();
+     customer.CustomerAmount=res[i].customerAmount;
+     customer.CustomerCode=res[i].customerCode;
+     customer.CustomerName=res[i].customerName;
+     this.CustomerModels.push(customer);
+    }
+   
   }
   ErrorGet(res:any){
     console.log(res);
@@ -32,11 +40,11 @@ export class CustomerComponent {
 
     var custdto:any={};
     custdto.CustomerCode=this.CustomerModel.CustomerCode;
-    custdto.CustomerEmail=this.CustomerModel.CustomerEmail;
+    //custdto.CustomerEmail=this.CustomerModel.CustomerEmail;
     custdto.CustomerName=this.CustomerModel.CustomerName;
     custdto.CustomerAmount=this.CustomerModel.CustomerAmount;
 
-    this.httpc.post("http://localhost:3000/Customers",custdto).subscribe(res=>this.Success(res),res=>this.Error(res))
+    this.httpc.post("https://localhost:44318/api/Customer",custdto).subscribe(res=>this.Success(res),res=>this.Error(res))
     //console.log(this.CustomerModel);
   }
 
