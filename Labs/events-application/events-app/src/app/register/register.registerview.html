@@ -17,7 +17,7 @@
               <label for="exampleDropdownFormPassword1">Password</label>
               <input type="password"  [ngModelOptions]="{standalone: true}"class="form-control"  [(ngModel)]="registerUserData.password" placeholder="Password">
             </div>
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="submit" (click)="registerUser()" class="btn btn-primary">Register</button>
           </form>
           </div>
         </div>

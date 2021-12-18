@@ -19,7 +19,7 @@
                             <input type="password"  [ngModelOptions]="{standalone: true}" class="form-control" [(ngModel)]="LoginUser.password"
                                 placeholder="Password">
                         </div>
-                        <button type="submit" class="btn btn-primary">Sign in</button>
+                        <button type="submit"(click)="loginUser()" class="btn btn-primary">Sign in</button>
                     </form>
                 </div>
             </div>

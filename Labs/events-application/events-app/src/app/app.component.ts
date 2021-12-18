@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'events-app';
+ 
+  constructor(private _authservice:AuthService){}
+  
+  logout(){
+    this._authservice.logoutUser();
+  }
+
 }
+
+
